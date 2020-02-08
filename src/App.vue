@@ -27,7 +27,7 @@
     >
       <q-list>
         <q-item-label header>Looks Familiar Right</q-item-label>
-        <q-item clickable tag="a" href="#asdf">
+        <q-item clickable tag="a" href="#hw">
           <q-item-section avatar>
             <q-icon name="school" />
           </q-item-section>
@@ -35,7 +35,7 @@
             <q-item-label>All Personality Types</q-item-label>
           </q-item-section>
         </q-item>
-        <q-item clickable tag="a" href="#asdf">
+        <q-item clickable tag="a" href="#hw2">
           <q-item-section avatar>
             <q-icon name="code" />
           </q-item-section>
@@ -43,7 +43,7 @@
             <q-item-label>Extroverts Vs. Introverts</q-item-label>
           </q-item-section>
         </q-item>
-        <q-item clickable tag="a" href="#asdf">
+        <q-item clickable tag="a" href="#hw3">
           <q-item-section avatar>
             <q-icon name="chat" />
           </q-item-section>
@@ -83,7 +83,7 @@
             <q-item-label>Most Unique Personality Types</q-item-label>
           </q-item-section>
         </q-item>
-        <q-item clickable tag="a"  href="#asdf">
+        <q-item clickable tag="a"  href="#hw4">
           <q-item-section avatar>
             <q-icon name="rss_feed" />
           </q-item-section>
@@ -95,19 +95,24 @@
     </q-drawer>
 
     <q-page-container>
-      <HelloWorld />
+      <Intro id="hw" />
+      <AllPersonalities id="hw2" />
+      <ExtroVsIntro id="hw3" />
+      <HelloWorld id="hw4" />
     </q-page-container>
   </q-layout>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Intro from './components/Intro.vue'
+import AllPersonalities from './components/AllPersonalities.vue'
+import ExtroVsIntro from './components/ExtroVsIntro.vue'
 
 export default {
   name: 'LayoutDefault',
 
   components: {
-    HelloWorld
+    Intro, AllPersonalities, ExtroVsIntro
   },
 
   data () {
