@@ -35,7 +35,7 @@
             <q-item-label>All Personality Types</q-item-label>
           </q-item-section>
         </q-item>
-        <q-item clickable tag="a" href="#hw2">
+        <q-item clickable tag="a" href="#extro-intro">
           <q-item-section avatar>
             <q-icon name="code" />
           </q-item-section>
@@ -43,7 +43,7 @@
             <q-item-label>Extroverts Vs. Introverts</q-item-label>
           </q-item-section>
         </q-item>
-        <q-item clickable tag="a" href="#hw3">
+        <q-item clickable tag="a" href="#intu-obs">
           <q-item-section avatar>
             <q-icon name="chat" />
           </q-item-section>
@@ -51,7 +51,7 @@
             <q-item-label>Intutioners Vs. Observanters</q-item-label>
           </q-item-section>
         </q-item>
-        <q-item clickable tag="a" href="#asdf">
+        <q-item clickable tag="a" href="#think-feel">
           <q-item-section avatar>
             <q-icon name="forum" />
           </q-item-section>
@@ -59,7 +59,7 @@
             <q-item-label>Thinkers Vs. Feelers</q-item-label>
           </q-item-section>
         </q-item>
-        <q-item clickable tag="a"  href="#asdf">
+        <q-item clickable tag="a" href="#judge-prospect">
           <q-item-section avatar>
             <q-icon name="rss_feed" />
           </q-item-section>
@@ -67,7 +67,7 @@
             <q-item-label>Judgers Vs. Prospectors</q-item-label>
           </q-item-section>
         </q-item>
-        <q-item clickable tag="a"  href="#asdf">
+        <q-item clickable tag="a" href="#asdf">
           <q-item-section avatar>
             <q-icon name="rss_feed" />
           </q-item-section>
@@ -83,7 +83,7 @@
             <q-item-label>Most Unique Personality Types</q-item-label>
           </q-item-section>
         </q-item>
-        <q-item clickable tag="a"  href="#hw4">
+        <q-item clickable tag="a"  href="#managers">
           <q-item-section avatar>
             <q-icon name="rss_feed" />
           </q-item-section>
@@ -97,8 +97,16 @@
     <q-page-container>
       <Intro id="hw" />
       <AllPersonalities id="hw2" />
-      <ExtroVsIntro id="hw3" />
-      <HelloWorld id="hw4" />
+      <ExtroVsIntro id="extro-intro" />
+      <IntuVsObs id="intu-obs" />
+      <ThinkVsFeel id="think-feel" />
+      <JudgeVsProspect id="judge-prospect" />
+      <Managers id="managers"/>
+      <q-page class="flex flex-center think-feel" style="background-color: white">
+        <a target= "_blank" href="https://docs.google.com/spreadsheets/d/1aMfhdIj2PNt_ylVwzmQfIMMpW3iJghO7WcD3oHW8PfI/edit?usp=sharing">
+         What You Actually Came Here For
+        </a>
+      </q-page>
     </q-page-container>
   </q-layout>
 </template>
@@ -107,12 +115,16 @@
 import Intro from './components/Intro.vue'
 import AllPersonalities from './components/AllPersonalities.vue'
 import ExtroVsIntro from './components/ExtroVsIntro.vue'
+import IntuVsObs from './components/IntuVsObs.vue'
+import ThinkVsFeel from './components/ThinkVsFeel.vue'
+import JudgeVsProspect from './components/JudgeVsProspect.vue'
+import Managers from './components/Managers.vue'
 
 export default {
   name: 'LayoutDefault',
 
   components: {
-    Intro, AllPersonalities, ExtroVsIntro
+    Intro, AllPersonalities, ExtroVsIntro, IntuVsObs, ThinkVsFeel, JudgeVsProspect, Managers
   },
 
   data () {

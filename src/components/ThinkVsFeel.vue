@@ -1,28 +1,28 @@
 <template>
-  <q-page class="flex flex-center extro-intro">
+  <q-page class="flex flex-center think-feel">
     <div class="col">
-      <div class="row justify-center" align="center" style="margin-bottom: 100px"><h3>Extroverts Vs. Introverts</h3></div>
+      <div class="row justify-center" align="center" style="margin-bottom: 100px"><h3>Thinkers Vs Feelers</h3></div>
       <div class="row justify-center">
         <div class="col-4">
           <div class="row justify-center">
-            <img class="row ei-img" alt="introverts" src="../assets/introverts.png">
+            <img class="row tf-img" alt="thinking" src="../assets/thinker.png">
           </div>
           <div class="row justify-center" style="height: 75px">
             <h3>31%</h3>
           </div>
           <div class="row justify-center">
-            <h5>Extroverts (E)</h5>
+            <h5>Thinking (T)</h5>
           </div>
         </div>
         <div class="col-4">
           <div class="row justify-center">
-            <img class="row ei-img" alt="extroverts" src="../assets/extrovert.png">
+            <img class="row tf-img" alt="feeling" style="height: 310px; margin-bottom: -25px; margin-top: 15px" src="../assets/feeling.png">
           </div>
-          <div class="row justify-center" style="height: 75px">
+          <div class="row justify-center" style="height: 75px;">
             <h3>69%</h3>
           </div>
           <div class="row justify-center">
-            <h5>Introverts (I)</h5>
+            <h5>Feeling (F)</h5>
           </div>
         </div>
       </div>
@@ -31,11 +31,12 @@
 </template>
 
 <style>
-  .extro-intro {
+  .think-feel {
     background-color: #2d92cc;
     color: white;
   }
-  .ei-img {
+  .tf-img {
+    width: 310px;
     height: 300px;
     position: relative;
   }
@@ -43,6 +44,6 @@
 
 <script>
 export default {
-  name: 'ExtroVsIntro'
+  name: 'ThinkVsFeel.vue'
 }
 </script>

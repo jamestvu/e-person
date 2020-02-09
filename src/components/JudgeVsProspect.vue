@@ -1,28 +1,28 @@
 <template>
-  <q-page class="flex flex-center extro-intro">
+  <q-page class="flex flex-center judge-prosp">
     <div class="col">
-      <div class="row justify-center" align="center" style="margin-bottom: 100px"><h3>Extroverts Vs. Introverts</h3></div>
+      <div class="row justify-center" align="center" style="margin-bottom: 100px"><h3>Judgers Vs. Prospectors</h3></div>
       <div class="row justify-center">
         <div class="col-4">
           <div class="row justify-center">
-            <img class="row ei-img" alt="introverts" src="../assets/introverts.png">
+            <img class="row jp-img" alt="judging" style="margin-left: -100px" src="../assets/judge.png">
           </div>
           <div class="row justify-center" style="height: 75px">
-            <h3>31%</h3>
+            <h3>60%</h3>
           </div>
           <div class="row justify-center">
-            <h5>Extroverts (E)</h5>
+            <h5>Judging (J)</h5>
           </div>
         </div>
         <div class="col-4">
           <div class="row justify-center">
-            <img class="row ei-img" alt="extroverts" src="../assets/extrovert.png">
+            <img class="row jp-img" alt="prospecting" style="margin-left: -40px" src="../assets/prospect.png">
           </div>
           <div class="row justify-center" style="height: 75px">
-            <h3>69%</h3>
+            <h3>40%</h3>
           </div>
           <div class="row justify-center">
-            <h5>Introverts (I)</h5>
+            <h5>Prospector (P)</h5>
           </div>
         </div>
       </div>
@@ -31,11 +31,11 @@
 </template>
 
 <style>
-  .extro-intro {
-    background-color: #2d92cc;
-    color: white;
+  .judge-prosp {
+    background-color: #E5E5E5;
+    color: black;
   }
-  .ei-img {
+  .jp-img {
     height: 300px;
     position: relative;
   }
@@ -43,6 +43,6 @@
 
 <script>
 export default {
-  name: 'ExtroVsIntro'
+  name: 'JudgeVsProspect.vue'
 }
 </script>
