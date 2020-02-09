@@ -83,7 +83,7 @@
             <q-item-label>Most Unique Personality Types</q-item-label>
           </q-item-section>
         </q-item>
-        <q-item clickable tag="a"  href="#hw4">
+        <q-item clickable tag="a"  href="#managers">
           <q-item-section avatar>
             <q-icon name="rss_feed" />
           </q-item-section>
@@ -101,6 +101,12 @@
       <IntuVsObs id="intu-obs" />
       <ThinkVsFeel id="think-feel" />
       <JudgeVsProspect id="judge-prospect" />
+      <Managers id="managers"/>
+      <q-page class="flex flex-center think-feel" style="background-color: white">
+        <a target= "_blank" href="https://docs.google.com/spreadsheets/d/1aMfhdIj2PNt_ylVwzmQfIMMpW3iJghO7WcD3oHW8PfI/edit?usp=sharing">
+         What You Actually Came Here For
+        </a>
+      </q-page>
     </q-page-container>
   </q-layout>
 </template>
@@ -112,12 +118,13 @@ import ExtroVsIntro from './components/ExtroVsIntro.vue'
 import IntuVsObs from './components/IntuVsObs.vue'
 import ThinkVsFeel from './components/ThinkVsFeel.vue'
 import JudgeVsProspect from './components/JudgeVsProspect.vue'
+import Managers from './components/Managers.vue'
 
 export default {
   name: 'LayoutDefault',
 
   components: {
-    Intro, AllPersonalities, ExtroVsIntro, IntuVsObs, ThinkVsFeel, JudgeVsProspect
+    Intro, AllPersonalities, ExtroVsIntro, IntuVsObs, ThinkVsFeel, JudgeVsProspect, Managers
   },
 
   data () {
