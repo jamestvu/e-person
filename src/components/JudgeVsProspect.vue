@@ -32,7 +32,7 @@
 
 <style>
   .judge-prosp {
-    background-color: white;
+    background-color: #E5E5E5;
     color: black;
   }
   .jp-img {
