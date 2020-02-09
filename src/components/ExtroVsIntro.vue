@@ -8,10 +8,10 @@
             <img class="row ei-img" alt="introverts" src="../assets/introverts.png">
           </div>
           <div class="row justify-center" style="height: 75px">
-            <h3>32%</h3>
+            <h3>31%</h3>
           </div>
           <div class="row justify-center">
-            <h5>Extroverts</h5>
+            <h5>Extroverts (E)</h5>
           </div>
         </div>
         <div class="col-4">
@@ -19,10 +19,10 @@
             <img class="row ei-img" alt="extroverts" src="../assets/extrovert.png">
           </div>
           <div class="row justify-center" style="height: 75px">
-            <h3>68%</h3>
+            <h3>69%</h3>
           </div>
           <div class="row justify-center">
-            <h5>Introverts</h5>
+            <h5>Introverts (I)</h5>
           </div>
         </div>
       </div>
@@ -35,10 +35,6 @@
     background-color: #2d92cc;
     color: white;
   }
-  .ei-rhombus {
-    -webkit-transform: translateY(-20px) translateX(3px) rotate(10deg);
-  }
-
   .ei-img {
     height: 300px;
     position: relative;
