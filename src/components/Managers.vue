@@ -106,6 +106,7 @@
           </div>
         </div>
 
+        <div class="row justify-center">DISCLAIMER: Only Tom submitted his results. (and Dean obviously)</div>
       </div>
     </div>
   </q-page>
