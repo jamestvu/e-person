@@ -8,7 +8,7 @@
             <img class="row jp-img" alt="judging" style="margin-left: -100px" src="../assets/judge.png">
           </div>
           <div class="row justify-center" style="height: 75px">
-            <h3>31%</h3>
+            <h3>60%</h3>
           </div>
           <div class="row justify-center">
             <h5>Judging (J)</h5>
@@ -19,7 +19,7 @@
             <img class="row jp-img" alt="prospecting" style="margin-left: -40px" src="../assets/prospect.png">
           </div>
           <div class="row justify-center" style="height: 75px">
-            <h3>69%</h3>
+            <h3>40%</h3>
           </div>
           <div class="row justify-center">
             <h5>Prospector (P)</h5>
