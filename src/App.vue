@@ -1,139 +1,93 @@
 <template>
-  <q-layout view="lHh Lpr lFf">
-    <q-header elevated class="glossy">
-      <q-toolbar>
-        <q-btn
-          flat
-          dense
-          round
-          @click="leftDrawerOpen = !leftDrawerOpen"
-          aria-label="Menu"
-          icon="menu"
-        />
+    <q-layout view="lHh Lpr lFf" @scroll="onScroll">
+      <q-header elevated class="bg-grey-10">
+        <q-toolbar>
+          <q-btn
+                  flat
+                  dense
+                  round
+                  @click="leftDrawerOpen = !leftDrawerOpen"
+                  aria-label="Menu"
+                  icon="menu"
+          />
 
-        <q-toolbar-title>
-          eWorldES Personalities
-        </q-toolbar-title>
+          <q-toolbar-title>
+            eWorldES Personalities
+          </q-toolbar-title>
 
-        <div>v{{ $q.version }}</div>
-      </q-toolbar>
-    </q-header>
+          <div>v{{ $q.version }}</div>
+        </q-toolbar>
+      </q-header>
 
-    <q-drawer
-      v-model="leftDrawerOpen"
-      show-if-above
-      bordered
-      content-class="bg-grey-2"
-    >
-      <q-list>
-        <q-item-label header>Looks Familiar Right</q-item-label>
-        <q-item clickable tag="a" href="#hw">
-          <q-item-section avatar>
-            <q-icon name="school" />
-          </q-item-section>
-          <q-item-section>
-            <q-item-label>All Personality Types</q-item-label>
-          </q-item-section>
-        </q-item>
-        <q-item clickable tag="a" href="#extro-intro">
-          <q-item-section avatar>
-            <q-icon name="code" />
-          </q-item-section>
-          <q-item-section>
-            <q-item-label>Extroverts Vs. Introverts</q-item-label>
-          </q-item-section>
-        </q-item>
-        <q-item clickable tag="a" href="#intu-obs">
-          <q-item-section avatar>
-            <q-icon name="chat" />
-          </q-item-section>
-          <q-item-section>
-            <q-item-label>Intutioners Vs. Observanters</q-item-label>
-          </q-item-section>
-        </q-item>
-        <q-item clickable tag="a" href="#think-feel">
-          <q-item-section avatar>
-            <q-icon name="forum" />
-          </q-item-section>
-          <q-item-section>
-            <q-item-label>Thinkers Vs. Feelers</q-item-label>
-          </q-item-section>
-        </q-item>
-        <q-item clickable tag="a" href="#judge-prospect">
-          <q-item-section avatar>
-            <q-icon name="rss_feed" />
-          </q-item-section>
-          <q-item-section>
-            <q-item-label>Judgers Vs. Prospectors</q-item-label>
-          </q-item-section>
-        </q-item>
-        <q-item clickable tag="a" href="#asdf">
-          <q-item-section avatar>
-            <q-icon name="rss_feed" />
-          </q-item-section>
-          <q-item-section>
-            <q-item-label>Most Common Personality Types</q-item-label>
-          </q-item-section>
-        </q-item>
-        <q-item clickable tag="a"  href="#asdf">
-          <q-item-section avatar>
-            <q-icon name="rss_feed" />
-          </q-item-section>
-          <q-item-section>
-            <q-item-label>Most Unique Personality Types</q-item-label>
-          </q-item-section>
-        </q-item>
-        <q-item clickable tag="a"  href="#managers">
-          <q-item-section avatar>
-            <q-icon name="rss_feed" />
-          </q-item-section>
-          <q-item-section>
-            <q-item-label>Manager Personalities</q-item-label>
-          </q-item-section>
-        </q-item>
-      </q-list>
-    </q-drawer>
+      <q-drawer
+        v-model="leftDrawerOpen"
+        show-if-above
+        bordered
+        content-class="bg-grey-2"
+      >
+          <q-list dense>
+              <q-item
+                      v-for="item in navigation"
+                      :key="item.id"
+                      clickable
+                      v-ripple
+                      dense
+                      @click="scrollTo(item.id)"
+                      :active="activeNav === item.id"
+              >
+                  <q-item-section>{{ item.label }}</q-item-section>
+              </q-item>
+          </q-list>
+      </q-drawer>
 
-    <q-page-container>
-      <Intro id="hw" />
-      <AllPersonalities id="hw2" />
-      <ExtroVsIntro id="extro-intro" />
-      <IntuVsObs id="intu-obs" />
-      <ThinkVsFeel id="think-feel" />
-      <JudgeVsProspect id="judge-prospect" />
-      <Managers id="managers"/>
-      <q-page class="flex flex-center think-feel" style="background-color: white">
-        <a target= "_blank" href="https://docs.google.com/spreadsheets/d/1aMfhdIj2PNt_ylVwzmQfIMMpW3iJghO7WcD3oHW8PfI/edit?usp=sharing">
-         What You Actually Came Here For
-        </a>
-      </q-page>
-    </q-page-container>
-  </q-layout>
+      <q-page-container>
+          <router-view name="intro" id="intro"></router-view>
+          <router-view name="allPersonalities" id="all-personalities"></router-view>
+          <router-view name="extroVsIntro" id="extro-intro"></router-view>
+          <router-view name="intuVsObs" id="intu-obs"></router-view>
+          <router-view name="thinkVsFeel" id="think-feel"></router-view>
+          <router-view name="judgeVsProspect" id="judge-prospect"></router-view>
+          <router-view name="managers" id="managers"></router-view>
+      </q-page-container>
+    </q-layout>
 </template>
 
 <script>
-import Intro from './components/Intro.vue'
-import AllPersonalities from './components/AllPersonalities.vue'
-import ExtroVsIntro from './components/ExtroVsIntro.vue'
-import IntuVsObs from './components/IntuVsObs.vue'
-import ThinkVsFeel from './components/ThinkVsFeel.vue'
-import JudgeVsProspect from './components/JudgeVsProspect.vue'
-import Managers from './components/Managers.vue'
+  import {NavigationMixin} from "./mixins";
 
-export default {
-  name: 'LayoutDefault',
+  export default {
+    name: 'LayoutDefault',
+    mixins: [ NavigationMixin ],
+    components: {
+    },
+    data () {
+      return {
+        tab: 'mails',
+        leftDrawerOpen: false
+      }
+    },
+  }
+</script>
 
-  components: {
-    Intro, AllPersonalities, ExtroVsIntro, IntuVsObs, ThinkVsFeel, JudgeVsProspect, Managers
-  },
+<style lang="scss">
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
 
-  data () {
-    return {
-      leftDrawerOpen: false
+#nav {
+  padding: 30px;
+
+  a {
+    font-weight: bold;
+    color: #2c3e50;
+
+    &.router-link-exact-active {
+      color: #42b983;
     }
   }
 }
-</script>
-
-<style>
 </style>
