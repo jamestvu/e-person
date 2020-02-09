@@ -4,9 +4,10 @@ import Intro from '../views/Intro.vue'
 import AllPersonalities from '../views/AllPersonalities'
 import ExtroVsIntro from '../views/ExtroVsIntro'
 import IntuVsObs from '../views/IntuVsObs'
-import ThinkVsFeel from "../views/ThinkVsFeel";
-import JudgeVsProspect from "../views/JudgeVsProspect";
-import Managers from "../views/Managers";
+import ThinkVsFeel from "../views/ThinkVsFeel"
+import JudgeVsProspect from "../views/JudgeVsProspect"
+import Managers from "../views/Managers"
+import EvilTwin from "../views/EvilTwin"
 
 Vue.use(VueRouter)
 
@@ -20,7 +21,8 @@ const routes = [
       intuVsObs: IntuVsObs,
       thinkVsFeel: ThinkVsFeel,
       judgeVsProspect: JudgeVsProspect,
-      managers: Managers
+      managers: Managers,
+        evilTwin: EvilTwin
     },
     meta: { scrollToTop: true }
   }
