@@ -48,6 +48,7 @@
           <router-view name="thinkVsFeel" id="think-feel"></router-view>
           <router-view name="judgeVsProspect" id="judge-prospect"></router-view>
           <router-view name="managers" id="managers"></router-view>
+          <router-view name="evilTwin" id="evil-twin"></router-view>
       </q-page-container>
     </q-layout>
 </template>

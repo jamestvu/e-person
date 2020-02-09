@@ -26,5 +26,9 @@ export const navigation = [
     {
         id: 'managers',
         label: 'Manager Personalities'
+    },
+    {
+        id: 'evil-twin',
+        label: 'Evil Twin Generator'
     }
 ]
