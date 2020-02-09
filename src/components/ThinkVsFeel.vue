@@ -5,7 +5,7 @@
       <div class="row justify-center">
         <div class="col-4">
           <div class="row justify-center">
-            <img class="row tf-img" alt="intuitive" src="../assets/introverts.png">
+            <img class="row tf-img" alt="thinking" src="../assets/thinker.png">
           </div>
           <div class="row justify-center" style="height: 75px">
             <h3>31%</h3>
@@ -16,7 +16,7 @@
         </div>
         <div class="col-4">
           <div class="row justify-center">
-            <img class="row tf-img" alt="observant" src="../assets/extrovert.png">
+            <img class="row tf-img" alt="feeling" src="../assets/feeling.png">
           </div>
           <div class="row justify-center" style="height: 75px">
             <h3>69%</h3>
@@ -36,6 +36,7 @@
     color: white;
   }
   .tf-img {
+    width: 310px;
     height: 300px;
     position: relative;
   }

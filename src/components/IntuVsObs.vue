@@ -5,7 +5,7 @@
       <div class="row justify-center">
         <div class="col-4">
           <div class="row justify-center">
-            <img class="row io-img" alt="intuitive" src="../assets/introverts.png">
+            <img class="row io-img" alt="intuitive" src="../assets/intuit.png">
           </div>
           <div class="row justify-center" style="height: 75px">
             <h3>74%</h3>
@@ -16,7 +16,7 @@
         </div>
         <div class="col-4">
           <div class="row justify-center">
-            <img class="row io-img" alt="observant" src="../assets/extrovert.png">
+            <img class="row io-img" alt="observant" src="../assets/observe.png">
           </div>
           <div class="row justify-center" style="height: 75px">
             <h3>26%</h3>
