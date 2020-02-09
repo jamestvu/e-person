@@ -5,7 +5,7 @@
       <div class="row justify-center">
         <div class="col-4">
           <div class="row justify-center">
-            <img class="row jp-img" alt="judging" src="../assets/introverts.png">
+            <img class="row jp-img" alt="judging" style="margin-left: -100px" src="../assets/judge.png">
           </div>
           <div class="row justify-center" style="height: 75px">
             <h3>31%</h3>
@@ -16,7 +16,7 @@
         </div>
         <div class="col-4">
           <div class="row justify-center">
-            <img class="row jp-img" alt="prospecting" src="../assets/extrovert.png">
+            <img class="row jp-img" alt="prospecting" style="margin-left: -40px" src="../assets/prospect.png">
           </div>
           <div class="row justify-center" style="height: 75px">
             <h3>69%</h3>

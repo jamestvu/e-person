@@ -16,9 +16,9 @@
         </div>
         <div class="col-4">
           <div class="row justify-center">
-            <img class="row tf-img" alt="feeling" src="../assets/feeling.png">
+            <img class="row tf-img" alt="feeling" style="height: 310px; margin-bottom: -25px; margin-top: 15px" src="../assets/feeling.png">
           </div>
-          <div class="row justify-center" style="height: 75px">
+          <div class="row justify-center" style="height: 75px;">
             <h3>69%</h3>
           </div>
           <div class="row justify-center">

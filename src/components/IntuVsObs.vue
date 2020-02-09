@@ -16,9 +16,9 @@
         </div>
         <div class="col-4">
           <div class="row justify-center">
-            <img class="row io-img" alt="observant" src="../assets/observe.png">
+            <img class="row io-eye-img" alt="observant" src="../assets/observe.png">
           </div>
-          <div class="row justify-center" style="height: 75px">
+          <div class="row justify-center" style="height: 75px; margin-top: -10px">
             <h3>26%</h3>
           </div>
           <div class="row justify-center">
@@ -36,7 +36,14 @@
     color: black;
   }
   .io-img {
+    width: 350px;
     height: 300px;
+    position: relative;
+  }
+  .io-eye-img {
+    margin-top: -30px;
+    width: 350px;
+    height: 340px;
     position: relative;
   }
 </style>
