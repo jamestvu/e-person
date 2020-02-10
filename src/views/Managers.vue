@@ -29,8 +29,8 @@
           </div>
         </template>
       </div>
-    <br>
-      <div class="text-center">DISCLAIMER: Only Tom submitted his results. (and Dean obviously)</div>
+      <br>
+      <div class="text-center" >DISCLAIMER: Only Tom submitted his results. (and Dean obviously)</div>
   </q-page>
 </template>
 

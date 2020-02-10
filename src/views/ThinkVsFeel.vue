@@ -1,6 +1,6 @@
 <template>
   <q-page class="flex flex-center think-feel">
-    <div class="col">
+    <div class="col" style="margin-bottom: 100px">
       <div class="row justify-center" align="center" style="margin-bottom: 100px"><h3>Thinkers Vs. Feelers</h3></div>
       <div class="row justify-center">
         <div class="col-4">
@@ -27,6 +27,9 @@
         </div>
       </div>
     </div>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+      <polygon fill="#e5e5e5" points="0,100 100,0 100,100"/>
+    </svg>
   </q-page>
 </template>
 
