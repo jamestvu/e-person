@@ -4,7 +4,8 @@
       <div class="row justify-center" align="center" style="margin-bottom: 25px"><h3>Who is your Evil Twin?</h3></div>
       <div class="row justify-center">
           <div class="row">
-            <q-select outlined v-model="persType" :options="persTypes" label="Personality Type" class="pers-dd"/>
+            <q-select outlined v-model="persType" :options="persTypes" label="Your Personality Type" class="pers-dd"
+              option-value="code" option-label="class"/>
             <q-btn round color="brown-5" icon="directions" style="margin-left: 25px" size="lg"
                    v-bind:disabled="persType == ''" @click="computeTwin()"/>
           </div>
@@ -68,8 +69,12 @@ export default {
 
     data() {
       return {
-          persTypes: ['ENTJ', 'ENTP', 'ENFJ', 'ENFP', 'ESTJ', 'ESFJ', 'ESTP', 'ESFP',
-                      'INTJ', 'INTP', 'INFJ', 'INFP', 'ISTJ', 'ISFJ', 'ISTP', 'ISFP'],
+          persTypes: [{code: 'ENTJ', class: 'ESTJ - Commander'}, {code: 'ENTP', class: 'ENTP - Debater'}, {code: 'ENFJ', class: 'ENFJ - Protagonist'},
+              {code: 'ENFP', class: 'ENFP - Campaigner'}, {code: 'ESTJ', class: 'ESTJ - Executive'}, {code: 'ESFJ', class: 'ESFJ - Consul'},
+              {code: 'ESTP', class: 'ESTP - Entrepreneur'}, {code: 'ESFP', class: 'ESP - Entertainer'},
+              {code: 'INTJ', class: 'INTJ - Architect'}, {code: 'INTP', class: 'INTP - Logician'}, {code: 'INFJ', class: 'INFJ - Advocate'},
+              {code: 'INFP', class: 'INFP - Mediator'}, {code: 'ISTJ', class: 'ISTJ - Logistician'}, {code: 'ISFJ', class: 'ISFJ - Defender'},
+              {code: 'ISTP', class: 'ISTP - Virtuoso'}, {code: 'ISFP', class: 'ISFP - Adventurer'}],
           persType: '',
           twinResultText: '',
           resultPic: ''
@@ -81,7 +86,7 @@ export default {
     methods: {
       computeTwin() {
         this.twinResultText = 'Your Evil Twin could possibly be...';
-        switch (this.persType) {
+        switch (this.persType.code) {
             case 'ENTJ': this.computeENTJ(); break;
             case 'ENTP': this.computeENTP(); break;
             case 'ENFJ': this.computeENFJ(); break;
