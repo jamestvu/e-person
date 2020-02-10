@@ -1,5 +1,5 @@
 <template>
-  <q-page id="all-personalities">
+  <q-page id="all-personalities" style="padding-bottom: 200px">
     <div class="q-pa-md">
       <div style="width: 50vw; margin: auto;" ref="guildWindow">
         <div id="title" class="row">
@@ -63,6 +63,9 @@
         </div>
       </div>
     </div>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+      <polygon fill="#2d92cc" points="0,100 100,0 100,100"/>
+    </svg>
   </q-page>
 </template>
 
