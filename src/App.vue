@@ -49,6 +49,11 @@
           <router-view name="judgeVsProspect" id="judge-prospect"></router-view>
           <router-view name="managers" id="managers"></router-view>
           <router-view name="evilTwin" id="evil-twin"></router-view>
+          <q-page class="flex flex-center evil-twin">
+              <div class="justify-center">
+                  <a href="https://docs.google.com/spreadsheets/d/1aMfhdIj2PNt_ylVwzmQfIMMpW3iJghO7WcD3oHW8PfI/edit?usp=sharing" target="_blank">What You Really Came Here For</a>
+              </div>
+          </q-page>
       </q-page-container>
     </q-layout>
 </template>
