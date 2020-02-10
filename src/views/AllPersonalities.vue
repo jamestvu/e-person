@@ -119,7 +119,7 @@
     height: 300px;
   }
   .animate-bar {
-    width:40vw;
+    width: 40vw;
     -moz-border-radius: 40px/100px;
     -webkit-border-radius: 40px 100px;
     border-radius: 40px/100px;
@@ -155,6 +155,9 @@
     }
     p {
       font-size: 1em;
+    }
+    .animate-bar {
+      width: 70vw;
     }
   }
 </style>
