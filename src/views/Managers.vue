@@ -1,5 +1,5 @@
 <template>
-  <q-page class="q-pa-md flex flex-center text-center">
+  <q-page class="q-pa-md flex flex-center text-center text-white">
     <div class="text-h3">Manager Personalities</div>
     <div class="row q-gutter-md">
       <template v-for="(manager, index) in managers">
@@ -34,7 +34,6 @@
 <style>
   body {
     background-color: #5F5980;
-    color: white;
   }
 
   #managers .personality {
