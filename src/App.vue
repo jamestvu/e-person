@@ -21,7 +21,6 @@
 
       <q-drawer
         v-model="leftDrawerOpen"
-        show-if-above
         bordered
         content-class="bg-grey-2"
       >
@@ -63,8 +62,7 @@
     },
     data () {
       return {
-        tab: 'mails',
-        leftDrawerOpen: false
+          leftDrawerOpen: false
       }
     },
   }
