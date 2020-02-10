@@ -15,7 +15,7 @@
             eWorldES Personalities
           </q-toolbar-title>
 
-          <div>v{{ $q.version }}</div>
+          <div>v0.69</div>
         </q-toolbar>
       </q-header>
 

@@ -7,13 +7,12 @@
           <q-card>
             <q-card-section>
               <img src="../assets/profile-placeholder.png"
-                   style="width: 100%; height: 100%"
+                   style="width: 250px; height: 250px !important"
                    @mouseenter="manager.imageToggle = !manager.imageToggle"
                    v-if="!manager.imageToggle"
               >
               <div v-if="manager.imageToggle">
-                <img :src="manager.image"
-                     style="width: 100%; height: 100%"
+                <img :src="manager.image" style="height: 220px !important"
                      @mouseleave="manager.imageToggle = !manager.imageToggle"
                 >
                 <div class="text-subtitle1">{{ manager.trait }}</div>
@@ -38,6 +37,10 @@
 
   #managers .personality {
     border-radius: 50%;
+  }
+
+  #managers .text-subtitle1 {
+    height: 30px;
   }
 
   #managers img {
