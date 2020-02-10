@@ -8,12 +8,12 @@
             <q-card class="full-height q-ma-xs">
               <q-card-section>
                 <div style="margin: 0 auto">
-                  <img :src="manager.original"
-                       style="width: 100%; height: 100%; border-radius: 50%; border: 2px solid black"
+                  <img src="../assets/profile-placeholder.png"
+                       style="width: 100%; height: 100%; border-radius: 50%; border: 1px solid grey; cursor: pointer"
                        @click="manager.imageToggle = !manager.imageToggle"
                        v-if="!manager.imageToggle">
                   <div v-if="manager.imageToggle">
-                    <img :src="manager.image"
+                    <img :src="manager.image" style="cursor: pointer"
                          @click="manager.imageToggle = !manager.imageToggle"
                     >
                     <div class="text-subtitle1">{{ manager.trait }}</div>
@@ -87,7 +87,7 @@
           },
           {
             name: 'Dean',
-            nickname: 'Dean the Destroyer',
+            nickname: 'Dean Da Destroyer',
             imageToggle: false,
             trait: 'Destroyer (DEAN-S)',
             original: require('@/assets/managers/dean.png'),
