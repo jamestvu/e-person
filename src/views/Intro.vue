@@ -13,6 +13,7 @@
   body {
     background: url('../assets/starry-night.jpg') no-repeat;
     background-size: 100vw 100vh;
+    font-family: 'Candara';
   }
 </style>
 

@@ -29,7 +29,7 @@
                      no-default-spinner/>
             </div>
             <div class="col-2" v-bind:style="{height: scales.graphicSize.gHeight + 'px'}">
-              <div ver>
+              <div>
                 <h3 v-bind:style="character.reveal ? colors.selectedObject : ''">{{ character.name }}</h3>
                 <p v-show="character.reveal">{{ character.count }}</p>
               </div>
@@ -46,7 +46,7 @@
                v-on:click="changeFaction(faction)"
                style="text-align: center;">
             <h3 v-bind:style="activeFaction.id === faction.id ? colors.selectedObject : ''">{{ faction.name }}</h3>
-            <q-img v-bind:style="{width: scales.graphicSize.gWidth + 'px'}"
+            <q-img v-bind:style="{width: scales.graphicSize.gWidth + 'px'}" style="cursor: pointer"
                    v-bind:alt="faction.id"
                    v-bind:src="faction.img"/>
           </div>
@@ -71,9 +71,10 @@
     background: -moz-radial-gradient(#364D58, #000);
     background: -webkit-radial-gradient(#364D58, #000);
     background-color:#364D58;
+    font-family: Candara;
   }
   h1 {
-    font: 50px Sans-Serif;
+    font: 50px Candara;
     text-align: center;
     color: #eee;
     text-shadow: 0px 2px 6px #333;
@@ -95,61 +96,6 @@
     text-shadow: 0px 2px 6px #333;
     margin-top: 10px;
   }
-
-  /*!* BAR CHART *!*/
-
-  /*!* Last bottom should have a shadow *!*/
-  /*#bars li div.bottom {*/
-  /*    -moz-box-shadow: 0 10px 10px hsla(0,0%,0%,.2);*/
-  /*    -webkit-box-shadow: 0 10px 30px hsla(0,0%,0%,.2);*/
-  /*    box-shadow: 0 10px 30px hsla(0,0%,0%,.2);*/
-  /*}*/
-  /*!* Ellipse top *!*/
-  /*#bars li div.top {*/
-  /*    background-color:rgba(213,238,241,0.5);*/
-  /*    position:relative; float:left; margin-left:10px; width:40px; height:100px;*/
-  /*    -moz-border-radius: 40px/100px; -webkit-border-radius: 40px 100px; border-radius: 40px/100px;*/
-  /*    -webkit-transition-property: margin-left;*/
-  /*    -webkit-transition-duration: 500ms;*/
-  /*}*/
-
-
-  /*#bars li div.top img { margin-left:10px; margin-top:15px; }*/
-  /*!* Bar bottom *!*/
-  /*#bar li div.bottom { position:relative; margin:5px 0; width:50px;*/
-  /*    height:100px; -moz-border-radius: 40px/100px; -webkit-border-radius: 40px 100px; border-radius: 40px/100px;*/
-  /*    background:-moz-linear-gradient(-90deg, #97a7a9, #b8cbcd); background:-webkit-gradient(linear, 0 top, 0 bottom, from(#97a7a9), to(#b8cbcd));*/
-  /*    -webkit-transition-property: width;*/
-  /*    -webkit-transition-duration: 500ms;*/
-  /*}*/
-  /*#bar li div.bottom div.infobox { padding:40px 0 0 600px;*/
-  /*    -webkit-transition-property: color;*/
-  /*    -webkit-transition-duration: 500ms;*/
-  /*}*/
-  /*#bar li div.bottom div.infobox h3 { font-family:Georgia,serif,Times; }*/
-  /*#bar li div.bottom div.infobox p {*/
-  /*    font-family: "Lucida Grande", Arial, Helvetica, Sans-Serif;*/
-  /*    opacity: 0;*/
-  /*    -webkit-transition-property: opacity;*/
-  /*    -webkit-transition-duration: 500ms;*/
-  /*}*/
-  /*!* General hover actions *!*/
-  /*#bar li:hover div.bottom div.infobox {*/
-  /*    color:#eee; text-shadow: 0px 5px 5px #111;*/
-  /*}*/
-  /*#bar li:hover div.bottom div.infobox p {*/
-  /*    opacity:1;*/
-  /*}*/
-  /*!* Adventurer bar *!*/
-  /*#adventurer div.top { z-index:99; }*/
-  /*#adventurer div.bottom { z-index:98; height:150px; }*/
-  /*#adventurer:hover div.bar { background-color:#1f81ac; height: 100px; width: adventurerBarWidth() + 'px'; }*/
-  /*#adventurer:hover div.icon { margin-left:160px;}*/
-  /*#adventurer:hover div.bottom { z-index:998; background-color:#1a6c90; width:200px;*/
-  /*    background:-moz-linear-gradient(-90deg, #1a6c90, #14506b); background:-webkit-gradient(linear, 0 top, 0 bottom, from(#1a6c90), to(#14506b)); }*/
-  /*!* Academy *!*/
-  /*#academy { clear:both; margin-top:-70px; position:relative; z-index:-999; }*/
-  /*#academy p { float:right; padding-top:247px; }*/
 </style>
 
 <script>
