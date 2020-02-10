@@ -15,32 +15,38 @@
           </div>
         </div>
 
-        <div class="row"
-             v-for="character in activeFaction.faction" v-bind:key="character.id"
-             v-on:mouseover="character.reveal = true, activeFaction.count = character.count"
-             v-on:mouseleave="character.reveal = false">
-          <div class="col">
-            <div v-bind:style="[character.reveal ? erectBar : '', scales.graphicSize.gHeight]" style="position: absolute;"/>
-            <q-img v-bind:style="[character.reveal ? erectIcon : '', scales.graphicSize.gWidth]"
-                   v-bind:alt="character.id"
-                   v-bind:src="character.img"
-                   no-default-spinner/>
-          </div>
-          <div class="col-2">
-            <div ver>
-              <h3 v-bind:style="character.reveal ? colors.selectedObject : ''">{{ character.name }}</h3>
-              <p v-show="character.reveal">{{ character.count }}</p>
+        <!-- Prevent images from jumping up by containing them in a container equal to rendered size -->
+        <div v-bind:style="{height: scales.graphicSize.gHeight  * 4 + 'px'}">
+          <div class="row"
+               v-for="character in activeFaction.faction" v-bind:key="character.id"
+               v-on:mouseover="character.reveal = true, activeFaction.count = character.count"
+               v-on:mouseleave="character.reveal = false">
+            <div class="col">
+              <div v-bind:style="[character.reveal ? erectBar : '', {height: scales.graphicSize.gHeight + 'px'}]" style="position: absolute;"/>
+              <q-img v-bind:style="[character.reveal ? erectIcon : '', {width: scales.graphicSize.gWidth + 'px'}]"
+                     v-bind:alt="character.id"
+                     v-bind:src="character.img"
+                     no-default-spinner/>
+            </div>
+            <div class="col-2" v-bind:style="{height: scales.graphicSize.gHeight + 'px'}">
+              <div ver>
+                <h3 v-bind:style="character.reveal ? colors.selectedObject : ''">{{ character.name }}</h3>
+                <p v-show="character.reveal">{{ character.count }}</p>
+              </div>
             </div>
           </div>
         </div>
 
+        <!-- Spacer div -->
+        <div style="border-top: white; height: 10px;"></div>
+
         <div class="row">
           <div class="col-3"
-               v-for="faction in factions" v-bind:key="faction.name"
+               v-for="faction in factions" v-bind:key="faction.id"
                v-on:click="changeFaction(faction)"
                style="text-align: center;">
             <h3 v-bind:style="activeFaction.id === faction.id ? colors.selectedObject : ''">{{ faction.name }}</h3>
-            <q-img v-bind:style="scales.graphicSize.gWidth"
+            <q-img v-bind:style="{width: scales.graphicSize.gWidth + 'px'}"
                    v-bind:alt="faction.id"
                    v-bind:src="faction.img"/>
           </div>
@@ -67,25 +73,27 @@
     background-color:#364D58;
   }
   h1 {
-    font: bold 50px Helvetica, Arial, Sans-Serif;
+    font: 50px Sans-Serif;
     text-align: center;
     color: #eee;
     text-shadow: 0px 2px 6px #333;
   }
   h2 {
-    font: bold 30px Helvetica, Arial, Sans-serif;
+    font: 30px Sans-serif;
     color:#eee;
     text-shadow: 0px 2px 6px #333;
   }
   h3 {
-    font: bold 20px Helvetica, Arial, Sans-serif;
+    font: 20px Sans-serif;
     color:#9fa8da;
     text-shadow: 0px 2px 6px #333;
+    margin: 0;
   }
   p {
-    font: bold 14px Helvetica, Arial, Sans-serif;
+    font: 20px Sans-serif;
     color:#eee;
     text-shadow: 0px 2px 6px #333;
+    margin-top: 10px;
   }
 
   /*!* BAR CHART *!*/
@@ -161,28 +169,28 @@ export default {
               id: 'architect',
               name: 'Architect',
               reveal: false,
-              img: 'https://static.neris-assets.com/images/personality-types/famous/analysts_INTP_bill_gates.svg?v=3',
+              img: 'anim-chart/intj-architect.svg',
               count: 0,
             },
             commander: {
-              id: 'adventurer',
-              name: 'Adventurer',
+              id: 'commander',
+              name: 'Commander',
               reveal: false,
-              img: 'https://static.neris-assets.com/images/personality-types/famous/analysts_INTP_bill_gates.svg?v=3',
+              img: 'anim-chart/entj-commander.svg',
               count: 2,
             },
             debater: {
               id: 'debater',
               name: 'Debater',
               reveal: false,
-              img: 'https://static.neris-assets.com/images/personality-types/famous/analysts_INTP_bill_gates.svg?v=3',
+              img: 'anim-chart/entp-debater.svg',
               count: 2,
             },
             logician: {
               id: 'logician',
               name: 'Logician',
               reveal: false,
-              img: 'https://static.neris-assets.com/images/personality-types/famous/analysts_INTP_bill_gates.svg?v=3',
+              img: 'anim-chart/intp-logician.svg',
               count: 4,
             },
           },
@@ -198,28 +206,28 @@ export default {
               id: 'advocate',
               name: 'Advocate',
               reveal: false,
-              img: 'https://static.neris-assets.com/images/personality-types/famous/analysts_INTP_bill_gates.svg?v=3',
+              img: 'anim-chart/infj-advocate.svg',
               count: 8,
             },
             campaigner: {
               id: 'campaigner',
               name: 'Campaigner',
               reveal: false,
-              img: 'https://static.neris-assets.com/images/personality-types/famous/analysts_INTP_bill_gates.svg?v=3',
+              img: 'anim-chart/enfp-campaigner.svg',
               count: 2,
             },
             mediator: {
               id: 'mediator',
               name: 'Mediator',
               reveal: false,
-              img: 'https://static.neris-assets.com/images/personality-types/famous/analysts_INTP_bill_gates.svg?v=3',
+              img: 'anim-chart/infp-mediator.svg',
               count: 4,
             },
             protagonist: {
               id: 'protagonist',
               name: 'Protagonist',
               reveal: false,
-              img: 'https://static.neris-assets.com/images/personality-types/famous/analysts_INTP_bill_gates.svg?v=3',
+              img: 'anim-chart/enfj-protagonist.svg',
               count: 4,
             },
           },
@@ -235,29 +243,29 @@ export default {
               id: 'consul',
               name: 'Consul',
               reveal: false,
-              img: 'https://static.neris-assets.com/images/personality-types/famous/analysts_INTP_bill_gates.svg?v=3',
+              img: 'anim-chart/esfj-consul.svg',
               count: 1,
             },
             defender: {
               id: 'defender',
               name: 'Defender',
               reveal: false,
-              img: 'https://static.neris-assets.com/images/personality-types/famous/analysts_INTP_bill_gates.svg?v=3',
+              img: 'anim-chart/isfj-defender.svg',
               count: 3,
             },
             executive: {
               id: 'executive',
               name: 'Executive',
               reveal: false,
-              img: 'https://static.neris-assets.com/images/personality-types/famous/analysts_INTP_bill_gates.svg?v=3',
+              img: 'anim-chart/estj-executive.svg',
               count: 0,
             },
             logistician: {
               id: 'logistician',
               name: 'Logistician',
               reveal: false,
-              img: 'https://static.neris-assets.com/images/personality-types/famous/analysts_INTP_bill_gates.svg?v=3',
-              count: 2,
+              img: 'anim-chart/istj-logistician.svg',
+              count: 3,
             },
           },
         },
@@ -272,28 +280,28 @@ export default {
               id: 'adventurer',
               name: 'Adventurer',
               reveal: false,
-              img: 'https://static.neris-assets.com/images/personality-types/famous/analysts_INTP_bill_gates.svg?v=3',
+              img: 'anim-chart/isfp-adventurer.svg',
               count: 2,
             },
             entertainer: {
               id: 'entertainer',
               name: 'Entertainer',
               reveal: false,
-              img: 'https://static.neris-assets.com/images/personality-types/famous/analysts_INTP_bill_gates.svg?v=3',
+              img: 'anim-chart/esfp-entertainer.svg',
               count: 0,
             },
             entrepreneur: {
               id: 'entrepreneur',
               name: 'Entrepreneur',
               reveal: false,
-              img: 'https://static.neris-assets.com/images/personality-types/famous/analysts_INTP_bill_gates.svg?v=3',
+              img: 'anim-chart/estp-entrepreneur.svg',
               count: 0,
             },
             virtuoso: {
               id: 'virtuoso',
               name: 'Virtuoso',
               reveal: false,
-              img: 'https://static.neris-assets.com/images/personality-types/famous/analysts_INTP_bill_gates.svg?v=3',
+              img: 'anim-chart/istp-virtuoso.svg',
               count: 0,
             },
           },
@@ -316,12 +324,8 @@ export default {
       scales: {
         barLength: 15,
         graphicSize: {
-          gHeight: {
-            height: '75px',
-          },
-          gWidth: {
-            width: '75px',
-          },
+          gHeight: '75',
+          gWidth: '75',
         },
       },
     }
