@@ -22,7 +22,7 @@
                v-on:mouseover="character.reveal = true, activeFaction.count = character.count"
                v-on:mouseleave="character.reveal = false">
             <div class="col">
-              <div v-bind:style="[character.reveal ? erectBar : '', {height: scales.graphicSize.gHeight + 'px'}]" style="position: absolute;"/>
+              <div class="animate-bar" v-bind:style="[character.reveal ? erectBar : '', {height: scales.graphicSize.gHeight + 'px'}]" style="position: absolute;"/>
               <q-img v-bind:style="[character.reveal ? erectIcon : '', {width: scales.graphicSize.gWidth + 'px'}]"
                      v-bind:alt="character.id"
                      v-bind:src="character.img"
@@ -98,6 +98,13 @@
     color:#eee;
     text-shadow: 0px 2px 6px #333;
     margin-top: 10px;
+  }
+  .animate-bar {
+    width:40vw;
+    -moz-border-radius: 40px/100px;
+    -webkit-border-radius: 40px 100px;
+    border-radius: 40px/100px;
+    -webkit-transition-duration: 500ms;
   }
 </style>
 
