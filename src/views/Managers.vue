@@ -1,7 +1,7 @@
 <template>
   <q-page class="q-pa-md text-center text-white" style="background-color: #5F5980; padding-top: 50px; padding-bottom: 250px">
       <div class="text-h3 q-mt-xl">Manager Personalities</div>
-      <div class="text-subtitle2">Click on any manager to find out what personality they are!</div>
+      <div class="text-subtitle1">Click on any manager to find out what personality they are!</div>
       <div class="row wrap" style="margin-top: 5em">
         <template v-for="(manager, index) in managers">
           <div class="col-md-2 col-xs-4 text-black q-mb-md" :key="index">
@@ -12,10 +12,13 @@
                        style="width: 100%; height: 100%; border-radius: 50%; border: 1px solid grey; cursor: pointer"
                        @click="manager.imageToggle = !manager.imageToggle"
                        v-if="!manager.imageToggle">
+                    <div v-if="!manager.imageToggle" style="height: 28px">
+                    </div>
                   <div v-if="manager.imageToggle">
                     <img :src="manager.image" style="cursor: pointer"
                          @click="manager.imageToggle = !manager.imageToggle"
                     >
+
                     <div class="text-subtitle1">{{ manager.trait }}</div>
 
                   </div>

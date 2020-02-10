@@ -1,8 +1,8 @@
 <template>
   <q-page class="flex flex-center">
-    <div class="absolute-center text-center text-white" style="margin-top: -10px; z-index: 1">
-      <div class="text-h3">eWorld Personalities</div>
-      <p>eWorld staffs have taken a personality test to see who they are.</p>
+    <div class="absolute-center text-center text-white" style="margin-top: -125px; z-index: 1">
+      <div class="text-h2">eWorldES Personalities</div>
+      <p style="font-size: 20px">eWorldES staffs have taken a personality test to see who they are.</p>
       <q-btn outline color="primary" text-color="white" label="See More" @click="scrollTo('all-personalities')"></q-btn>
     </div>
     <img src="../assets/all-personalities.png" width="100%" class="absolute-bottom">
