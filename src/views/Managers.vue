@@ -1,5 +1,5 @@
 <template>
-  <q-page class="q-pa-md text-center text-white" style="background-color: #5F5980">
+  <q-page class="q-pa-md text-center text-white" style="background-color: #5F5980; padding-top: 50px; padding-bottom: 250px">
       <div class="text-h3 q-mt-xl">Manager Personalities</div>
       <div class="text-subtitle2">Click on any manager to find out what personality they are!</div>
       <div class="row wrap" style="margin-top: 5em">
@@ -31,10 +31,21 @@
       </div>
       <br>
       <div class="text-center" >DISCLAIMER: Only Tom submitted his results. (and Dean obviously)</div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+          <polygon fill="#E5E5E5" points="0,100 100,0 100,100"/>
+      </svg>
   </q-page>
 </template>
 
 <style>
+    svg {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 10vw;
+        /* set height to pixels if you want angle to change with screen width */
+    }
 </style>
 
 <script>

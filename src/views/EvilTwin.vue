@@ -1,5 +1,5 @@
 <template>
-  <q-page id="evil-twin" class="flex flex-center evil-twin">
+  <q-page id="evil-twin" class="flex flex-center evil-twin" style="padding-bottom: 100px">
     <div class="col">
       <div class="row justify-center" align="center" style="margin-bottom: 25px"><h3>Who is your Evil Twin?</h3></div>
       <div class="row justify-center">
@@ -17,6 +17,9 @@
         <h5>{{twinResultText}}</h5>
       </div>
     </div>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+      <polygon fill="white" points="0,100 100,0 100,100"/>
+    </svg>
   </q-page>
 </template>
 
@@ -37,6 +40,15 @@
 
   #evil-twin div.q-field__control {
     background-color: white;
+  }
+
+  svg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 10vw;
+    /* set height to pixels if you want angle to change with screen width */
   }
 
 </style>
