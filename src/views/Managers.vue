@@ -71,7 +71,7 @@
             name: 'Joel',
             nickname: 'JoJo',
             imageToggle: false,
-            trait: 'Defender (ISFJ-A)',
+            trait: 'Protagonist (ENFJ-A)',
             original: require('@/assets/managers/joel.jpeg'),
             image: 'https://static.neris-assets.com/images/personality-types/famous/sentinels_ISFJ_captain_america.svg?v=3'
           },
@@ -79,7 +79,7 @@
             name: 'Rex',
             nickname: 'Dino',
             imageToggle: false,
-            trait: 'Logician (INTP-A)',
+            trait: 'Logistician (ISTJ-A)',
             original: require('@/assets/managers/rex.png'),
             image: 'https://static.neris-assets.com/images/personality-types/famous/analysts_INTP_neo_the_matrix.svg?v=3'
           },

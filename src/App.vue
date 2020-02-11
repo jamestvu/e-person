@@ -15,7 +15,7 @@
             eWorldES Personalities
           </q-toolbar-title>
 
-          <div>v0.69</div>
+          <div>v0.70</div>
         </q-toolbar>
       </q-header>
 

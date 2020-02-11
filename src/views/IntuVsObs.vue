@@ -8,7 +8,7 @@
             <img class="row io-img" alt="intuitive" src="../assets/intuit.png">
           </div>
           <div class="row justify-center" style="height: 75px">
-            <h3>74%</h3>
+            <h3>70%</h3>
           </div>
           <div class="row justify-center">
             <h5>Intuitive (N)</h5>
@@ -19,7 +19,7 @@
             <img class="row io-eye-img" alt="observant" src="../assets/observe.png">
           </div>
           <div class="row justify-center" style="height: 75px; margin-top: -10px">
-            <h3>26%</h3>
+            <h3>30%</h3>
           </div>
           <div class="row justify-center">
             <h5>Observant (S)</h5>

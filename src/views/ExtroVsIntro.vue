@@ -8,7 +8,7 @@
             <img class="row ei-img" alt="introverts" src="../assets/introverts.png">
           </div>
           <div class="row justify-center" style="height: 75px">
-            <h3>31%</h3>
+            <h3>35%</h3>
           </div>
           <div class="row justify-center">
             <h5>Extroverts (E)</h5>
@@ -19,7 +19,7 @@
             <img class="row ei-img" alt="extroverts" src="../assets/extrovert.png">
           </div>
           <div class="row justify-center" style="height: 75px">
-            <h3>69%</h3>
+            <h3>65%</h3>
           </div>
           <div class="row justify-center">
             <h5>Introverts (I)</h5>
