@@ -1,29 +1,17 @@
 <template>
   <q-page class="flex flex-center judge-prosp" style="padding-bottom: 100px">
-    <div class="col" style="margin-bottom: 100px">
-      <div class="row justify-center" align="center" style="margin-bottom: 100px"><h3>Judgers Vs. Prospectors</h3></div>
-      <div class="row justify-center">
-        <div class="col-4">
-          <div class="row justify-center">
-            <img class="row jp-img" alt="judging" style="margin-left: -100px" src="../assets/judge.png">
-          </div>
-          <div class="row justify-center" style="height: 75px">
-            <h3>63%</h3>
-          </div>
-          <div class="row justify-center">
-            <h5>Judging (J)</h5>
-          </div>
+    <div class="q-pa-md" style="margin-bottom: 100px">
+      <h3 class="text-center">Judgers Vs. Prospectors</h3>
+      <div class="row wrap justify-center">
+        <div class="col-xs-6 text-center full-height">
+            <img class="jp-img" alt="judging" src="../assets/judge.png">
+            <div class="text-h3">63%</div>
+            <div class="text-h5">Judging (J)</div>
         </div>
-        <div class="col-4">
-          <div class="row justify-center">
-            <img class="row jp-img" alt="prospecting" style="margin-left: -40px" src="../assets/prospect.png">
-          </div>
-          <div class="row justify-center" style="height: 75px">
-            <h3>37%</h3>
-          </div>
-          <div class="row justify-center">
-            <h5>Prospector (P)</h5>
-          </div>
+        <div class="col-xs-6 text-center full-height">
+            <img class="jp-img" alt="prospecting" src="../assets/prospect.png">
+            <div class="text-h3">37%</div>
+            <div class="text-h5">Prospector (P)</div>
         </div>
       </div>
     </div>
@@ -38,9 +26,16 @@
     background-color: #E5E5E5;
     color: black;
   }
+
   .jp-img {
     height: 300px;
     position: relative;
+  }
+
+  @media only screen and (max-width: 600px)  {
+    .jp-img {
+      width: 90%;
+    }
   }
 </style>
 

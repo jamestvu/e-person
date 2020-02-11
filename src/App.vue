@@ -30,7 +30,6 @@
                       :key="item.id"
                       clickable
                       v-ripple
-                      dense
                       @click="scrollTo(item.id)"
                       :active="activeNav === item.id"
               >

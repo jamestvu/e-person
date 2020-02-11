@@ -1,29 +1,17 @@
 <template>
   <q-page class="flex flex-center intu-obs" style="padding-bottom: 100px">
-    <div class="col" style="margin-bottom: 100px">
-      <div class="row justify-center" align="center" style="margin-bottom: 100px"><h3>Intuitioners Vs. Observatoriers</h3></div>
-      <div class="row justify-center">
-        <div class="col-4">
-          <div class="row justify-center">
-            <img class="row io-img" alt="intuitive" src="../assets/intuit.png">
-          </div>
-          <div class="row justify-center" style="height: 75px">
-            <h3>70%</h3>
-          </div>
-          <div class="row justify-center">
-            <h5>Intuitive (N)</h5>
-          </div>
+    <div class="q-pa-md" style="margin-bottom: 100px">
+      <h3 class="text-center">Intuitioners Vs. Observatoriers</h3>
+      <div class="row wrap justify-center">
+        <div class="col-xs-6 text-center full-height">
+            <img class="io-img" alt="intuitive" src="../assets/intuit.png" width="100%">
+            <div class="text-h3">70%</div>
+            <div class="text-h5">Intuitive (N)</div>
         </div>
-        <div class="col-4">
-          <div class="row justify-center">
-            <img class="row io-eye-img" alt="observant" src="../assets/observe.png">
-          </div>
-          <div class="row justify-center" style="height: 75px; margin-top: -10px">
-            <h3>30%</h3>
-          </div>
-          <div class="row justify-center">
-            <h5>Observant (S)</h5>
-          </div>
+        <div class="col-xs-6 text-center full-height">
+            <img class="row io-eye-img" alt="observant" src="../assets/observe.png" width="100%">
+            <div class="text-h3">30%</div>
+            <div class="text-h5">Observant (S)</div>
         </div>
       </div>
     </div>
@@ -39,13 +27,11 @@
     color: black;
   }
   .io-img {
-    width: 350px;
     height: 300px;
     position: relative;
   }
   .io-eye-img {
     margin-top: -30px;
-    width: 350px;
     height: 340px;
     position: relative;
   }

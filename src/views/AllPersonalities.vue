@@ -1,7 +1,7 @@
 <template>
   <q-page id="all-personalities" style="padding-bottom: 200px">
     <div class="q-pa-md">
-      <div style="width: 50vw; margin: auto;" ref="guildWindow">
+      <div class="guild-window" style="margin: auto;" ref="guildWindow">
         <div id="title" class="row">
           <div class="col">
             <h1>eWorld's Guild Members</h1>
@@ -9,27 +9,28 @@
         </div>
 
         <div id="classes" class="row">
-          <div class="col"/>
-          <div class="col-2">
-            <h2>Classes</h2>
+          <div class="col-xs"/>
+          <div class="col-xs-2">
+            <h2 class="shift-left">Classes</h2>
           </div>
         </div>
 
         <!-- Prevent images from jumping up by containing them in a container equal to rendered size -->
-        <div v-bind:style="{height: scales.graphicSize.gHeight  * 4 + 'px'}">
+        <div class="chart-height">
           <div class="row"
                v-for="character in activeFaction.faction" v-bind:key="character.id"
                v-on:mouseover="character.reveal = true, activeFaction.count = character.count"
                v-on:mouseleave="character.reveal = false">
-            <div class="col">
-              <div class="animate-bar" v-bind:style="[character.reveal ? erectBar : '', {height: scales.graphicSize.gHeight + 'px'}]" style="position: absolute;"/>
-              <q-img v-bind:style="[character.reveal ? erectIcon : '', {width: scales.graphicSize.gWidth + 'px'}]"
+            <div class="col-xs">
+              <div class="animate-bar img-height" v-bind:style="character.reveal ? erectBar : ''" style="position: absolute;"/>
+              <q-img class="img-width"
+                     v-bind:style="character.reveal ? erectIcon : ''"
                      v-bind:alt="character.id"
                      v-bind:src="character.img"
                      no-default-spinner/>
             </div>
-            <div class="col-2" v-bind:style="{height: scales.graphicSize.gHeight + 'px'}">
-              <div>
+            <div class="col-xs-2 img-height">
+              <div class="shift-left">
                 <h3 v-bind:style="character.reveal ? colors.selectedObject : ''">{{ character.name }}</h3>
                 <p v-show="character.reveal">{{ character.count }}</p>
               </div>
@@ -41,23 +42,23 @@
         <div style="border-top: white; height: 10px;"></div>
 
         <div class="row">
-          <div class="col-3"
+          <div class="col-xs-3"
                v-for="faction in factions" v-bind:key="faction.id"
                v-on:click="changeFaction(faction)"
                style="text-align: center;">
             <h3 v-bind:style="activeFaction.id === faction.id ? colors.selectedObject : ''">{{ faction.name }}</h3>
-            <q-img v-bind:style="{width: scales.graphicSize.gWidth + 'px'}" style="cursor: pointer"
+            <q-img class="img-width" style="cursor: pointer"
                    v-bind:alt="faction.id"
                    v-bind:src="faction.img"/>
           </div>
         </div>
 
         <div id="academy" class="row">
-          <div class="col" style="text-align: center;">
+          <div class="col-xs" style="text-align: center;">
             <q-img
               alt="academy"
               src="anim-chart/academy.svg"
-              style="width: 300px;"
+              class="academy"
             />
           </div>
         </div>
@@ -74,37 +75,90 @@
     background: -moz-radial-gradient(#364D58, #000);
     background: -webkit-radial-gradient(#364D58, #000);
     background-color:#364D58;
-    font-family: Candara;
   }
   h1 {
-    font: 50px Candara;
+    font-size: 3.6em;
+    font-weight: normal;
+    line-height: normal;
     text-align: center;
     color: #eee;
     text-shadow: 0px 2px 6px #333;
   }
   h2 {
-    font: 30px Sans-serif;
+    font-size: 2.15em;
+    font-weight: normal;
+    line-height: normal;
     color:#eee;
     text-shadow: 0px 2px 6px #333;
   }
   h3 {
-    font: 20px Sans-serif;
+    font-size: 1.4em;
+    line-height: normal;
     color:#9fa8da;
     text-shadow: 0px 2px 6px #333;
     margin: 0;
   }
   p {
-    font: 20px Sans-serif;
+    font-size: 1.5em;
     color:#eee;
     text-shadow: 0px 2px 6px #333;
-    margin-top: 10px;
+  }
+  .guild-window {
+    width: 50vw;
+  }
+  .academy {
+    width: 300px;
+  }
+  .img-width {
+    width: 75px;
+  }
+  .img-height {
+    height: 75px;
+  }
+  .chart-height {
+    height: 300px;
   }
   .animate-bar {
-    width:40vw;
+    width: 40vw;
     -moz-border-radius: 40px/100px;
     -webkit-border-radius: 40px 100px;
     border-radius: 40px/100px;
     -webkit-transition-duration: 500ms;
+  }
+  @media only screen and (max-width: 600px)  {
+    .guild-window {
+      width: auto;
+    }
+    .shift-left {
+      margin-left: -20px;
+    }
+    .academy {
+      width: 200px;
+    }
+    .img-width {
+      width: 50px;
+    }
+    .img-height {
+      height: 50px;
+    }
+    .chart-height {
+      height: 200px;
+    }
+    h1 {
+      font-size: 2.5em;
+    }
+    h2 {
+      font-size: 1.5em;
+    }
+    h3 {
+      font-size: 1em;
+    }
+    p {
+      font-size: 1em;
+    }
+    .animate-bar {
+      width: 70vw;
+    }
   }
 </style>
 
@@ -277,13 +331,7 @@ export default {
           color: '#eee',
         },
       },
-      scales: {
-        barLength: 15,
-        graphicSize: {
-          gHeight: '75',
-          gWidth: '75',
-        },
-      },
+      barScale: 15,
     }
   },
   mounted() {
@@ -313,12 +361,12 @@ export default {
     erectBar() {
       return {
         backgroundColor: this.activeFaction.color,
-        width: this.window.width/this.scales.barLength * this.activeFaction.count + 'px',
+        width: this.window.width/this.barScale * this.activeFaction.count + 'px',
       }
     },
     erectIcon() {
       return {
-        marginLeft: this.window.width/this.scales.barLength * this.activeFaction.count + 'px',
+        marginLeft: this.window.width/this.barScale * this.activeFaction.count + 'px',
       }
     },
   }
