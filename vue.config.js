@@ -8,6 +8,5 @@ module.exports = {
   },
   transpileDependencies: [
     'quasar'
-  ],
-    publicPath: '/e-person/'
+  ]
 }
